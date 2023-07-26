@@ -3,8 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	for x, y := range F {
-		fmt.Println("range F", x, y)
+	// for x, y := range F {
+	// 	fmt.Println("range F", x, y)
+	// }
+	type MyInt int
+	for i := range MyInt(3) {
+		fmt.Printf("type=%T, value=%d\n",i,i)
 	}
 }
 
